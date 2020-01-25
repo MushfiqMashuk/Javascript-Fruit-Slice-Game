@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit Slice Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script defer src="jQuery.js"></script>
+    
+    
+</head>
+<body>
+
+    <div id="dev">
+        <button id="btn1">Developer</button> <br>
+        <p id="developer"><a href="https://www.facebook.com/mushfiq.mashuk.3">Mushfiq Mashuk</a></p>
+    </div>
+
+    <div id="container">
+
+        <div id="lifeBox"></div>
+
+        <div id="nice">
+            <label for="difficulty">Level:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
+        </div>
+
+        <div id="score">
+            Score: <span id="scoreid">0</span>
+        </div>
+
+        <div id="try">Try Again</div>
+
+        <div id="correct"> Correct</div>
+
+        <div id="canvas">
+
+            <img alt="Fruit" id="fruit" class="fruits">
+
+        </div>
+
+        <div id="instruction">Slice The Fruits
+
+        </div>
+
+        <div id="Start-Reset">Start Game</div>
+
+        <div id="gameOver">Game Over! <br/> Your Score is <span id="gameScore">10</span></div>
+
+        <audio id="slicingSound">
+
+            <source src="audio/slice.mp3">
+            <source src="audio/slice.ogg">
+
+            <source src="audio/yell.mp3">
+            <source src="audio/yell.ogg">
+
+        </audio>
+
+        <audio id="yellingSound">
+    
+            <source src="audio/yell.mp3">
+            <source src="audio/yell.ogg">
+    
+        </audio>
+
+    </div>
+    
+</body>
+</html>

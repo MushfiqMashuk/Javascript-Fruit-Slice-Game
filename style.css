@@ -1,0 +1,283 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle, #fff, rgb(133, 146, 158));
+    background: -webkit-radial-gradient(circle, #fff, rgb(122, 131, 139));
+    background: -o-radial-gradient(circle, #fff, rgb(117, 128, 138));
+    background: -moz-radial-gradient(circle, #fff, rgb(118, 130, 141));
+}
+
+#container{
+    width: 750px;
+    height: 600px;
+    background-color: aqua;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;   
+}
+
+#container:hover{
+    box-shadow: 10px 10px 20px grey;
+    -webkit-box-shadow: 10px 10px 20px grey;
+    -moz-box-shadow: 10px 10px 20px grey; 
+}
+
+#score{
+    background-color: rgb(255, 238, 0);
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgb(75, 71, 71);
+    font-size: 16px;
+    box-shadow: 0px 3px grey;
+    line-height: 25px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+#try{
+    background-color: rgb(247, 4, 25);
+    width: 73px;
+    height: 25px;
+    padding: 10px;
+    font-family: cursive;
+    position: absolute;
+    left: 275px;
+    top: 15px;
+    display: none;
+}
+
+#correct{
+    background-color: rgb(7, 219, 18);
+    width: 73px;
+    height: 25px;
+    padding: 10px;
+    font-family: cursive;
+    position: absolute;
+    left: 275px;
+    top: 15px;
+    display: none;
+}
+
+#canvas{
+    background-color: white;
+    height: 400px;
+    width: 650px;
+    position: relative;
+    margin: 50px auto 10px auto;
+    font-size: 100px;
+    font-family: cursive;
+    text-align: center;
+    color: black;
+    box-shadow: 5px 5px 10px rgb(168, 0, 79);
+    -webkit-box-shadow: 5px 5px 10px rgb(168, 0, 79);
+    -moz-box-shadow: 5px 5px 10px rgb(168, 0, 79);
+    overflow: hidden;
+}
+
+#instruction{
+    width: 450px;
+    height: 60px;
+    background-color: rgb(112, 20, 63);
+    margin: 10px auto;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: cornsilk;
+    box-shadow: 0px 8px 5px rgb(82, 11, 11);
+    -webkit-box-shadow: 0px 8px 5px rgb(82, 11, 11);
+    -moz-box-shadow: 0px 8px 5px rgb(82, 11, 11);
+    
+}
+
+#options{
+    width: 450px;
+    height: 50px;
+    margin: 20px auto;
+}
+
+.option{
+    position: relative;
+    width: 82px;
+    height: 75px;
+    background-color: #4267B2;  
+    float: left;
+    margin-right: 40.5px;
+    text-align: center;
+    line-height: 70px;
+    font-family: cursive;
+    font-size: 20px;
+    color: azure;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgb(6, 41, 117);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+}
+
+.option:hover{
+
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0px 5px 5px rgb(86, 86, 87); ;
+}
+
+.option:active{
+    box-shadow: 0px 0px;
+    top: 5px;
+    
+}
+
+#op4{
+    margin-right: 0px;
+}
+
+.clear{
+    clear: both;
+}
+
+#Start-Reset{
+    width: 100px;
+    padding: 10px;
+    background-color: rgb(34, 89, 201);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 15px auto 5px auto;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -o-transition: all .1s;
+    -ms-transition: all .1s;  
+}
+
+#Start-Reset:hover{
+
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0px 5px 5px rgb(86, 86, 87);
+}
+
+#Start-Reset:active{
+
+    box-shadow: 0px 0px;
+    position: relative;
+    top: 5px;
+    
+}
+
+#lifeBox{
+    width: 100px;
+    padding: 10px;
+    background-color: rgb(255, 238, 0);
+    position: absolute;
+    color: black;
+    font-family: cursive;
+    text-align: center;
+    display: none;
+}
+
+
+.life{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+
+#gameOver{
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    width: 480px;
+    padding: 5px 15px;
+    background-color: rgb(236, 240, 13);
+    z-index: 2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    line-height: 100px;
+    text-transform: uppercase;
+    display: none;
+    
+}
+
+
+.fruits{
+    display: none;
+    position: absolute;
+}
+
+#nice{
+    background-color: rgb(255, 238, 0);
+    padding: 8px;
+    position: absolute;
+    top: 15;
+    left: 325px;
+    color: rgb(75, 71, 71);
+    font-size: 16px;
+    line-height: 25px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+#difficulty{
+    background-color: rgb(255, 238, 0);
+    color: rgb(75, 71, 71);
+    font-size: 16px;
+    line-height: 25px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border-style: none;
+}
+
+#dev{
+    float: left;
+      
+}
+
+#developer{
+    display: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#btn1{
+    background-color: rgb(190, 73, 37);
+    color: white;
+    border-style: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -o-transition: all .1s;
+    -ms-transition: all .1s; 
+}
+
+#btn1:hover{
+    background-color: white;
+    color: rgb(17, 17, 17);
+    box-shadow: 0px 5px 5px rgb(86, 86, 87);
+}
+
+#btn1:active{
+
+    box-shadow: 0px 0px;
+    position: relative;
+    top: 5px;
+    
+}
